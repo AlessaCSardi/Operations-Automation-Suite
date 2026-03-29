@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-Ops-Suite | Alessa Portfolio</title>
+    <style>
+        :root { --amz-orange: #ff9900; --amz-navy: #232f3e; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f9; margin: 0; padding: 20px; }
+        header { background: var(--amz-navy); color: white; padding: 1rem; border-radius: 8px; margin-bottom: 20px; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); cursor: pointer; transition: 0.2s; border-left: 5px solid var(--amz-orange); }
+        .card:hover { transform: scale(1.02); background: #fffaf0; }
+        .card h3 { margin-top: 0; color: var(--amz-navy); }
+        /* Modal Styles */
+        #modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; max-width: 500px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.3); z-index: 100; }
+        #overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 99; }
+        button { background: var(--amz-orange); border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Amazon Operations Suite v1.0</h1>
+    <p>Information Systems Solutions for Logistics & Fulfillment</p>
+</header>
+
+<div class="grid" id="main-grid">
+    </div>
+
+<div id="overlay" onclick="closeModal()"></div>
+<div id="modal">
+    <div id="modal-content"></div>
+    <br><button onclick="closeModal()">Close Tool</button>
+</div>
+
+<script>
+const tools = [
+    { name: "Damaged Goods Reporter", desc: "Log item ID and condition instantly.", action: () => showTool("ID: <input id='dmgId'> <button onclick='alert(\"Logged!\")'>Submit</button>") },
+    { name: "Pallet Tracker", desc: "Visual map of bin availability.", action: () => showTool("<div style='background:green;color:white;padding:20px'>Bin A1: EMPTY</div>") },
+    { name: "Restock Calculator", desc: "Calculate the exact reorder point.", action: () => {
+        let rop = (50 * 5) + 20; // Example Logic
+        showTool(`<h3>Reorder Point: ${rop} units</h3><p>Based on 50 sales/day and 5 day lead time.</p>`);
+    }},
+    { name: "QR Label Generator", desc: "Generate scannable codes.", action: () => showTool("<img src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=AMZ-UNIT-101'>") },
+    { name: "Aisle Heatmap", desc: "Identify warehouse bottlenecks.", action: () => showTool("<div style='background:red;height:20px;width:80%'></div>Aisle 4: HIGH TRAFFIC") },
+    { name: "FIFO Monitor", desc: "Track inventory age.", action: () => showTool("⚠️ Item 402 is 45 days old. Move to front!") },
+    { name: "Label Validator", desc: "Verify UPS/FedEx formats.", action: () => showTool("Format Check: <input oninput='this.value.startsWith(\"1Z\") ? alert(\"UPS Valid\") : \"\"'>") },
+    { name: "Auto-Invoicer", desc: "Draft orders for low stock.", action: () => showTool("Drafting Invoice for: 100x Brownies...") },
+    { name: "Dock Scheduler", desc: "Manage truck arrival slots.", action: () => showTool("Next Slot: 10:00 AM - Truck #402") },
+    { name: "Box Recommender", desc: "Reduce shipping waste.", action: () => showTool("Dimensions: 5x5x5 <br><b>Recommended: Size A1</b>") }
+];
+
+const grid = document.getElementById('main-grid');
+tools.forEach(tool => {
+    let card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `<h3>${tool.name}</h3><p>${tool.desc}</p>`;
+    card.onclick = tool.action;
+    grid.appendChild(card);
+});
+
+function showTool(html) {
+    document.getElementById('modal-content').innerHTML = html;
+    document.getElementById('modal').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
