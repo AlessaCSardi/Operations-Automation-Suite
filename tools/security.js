@@ -2,15 +2,15 @@ const securityTools = [
     { 
         name: "Permission Auditor", 
         desc: "Scan user access levels for sensitive data.",
-        run: () => render(`<h3>Access Control List</h3><p>Alessa: <b>Owner</b><br>Manager_01: <b>Write</b><br>Guest: <b style="color:red">Access Denied</b></p>`)
-        <button onclick="alert('Clicked!')">Click Me</button>
+        run: () => render(`<h3>Access Control List</h3><p>Alessa: <b>Owner</b><br>Manager_01: <b>Write</b><br>Guest: <b style="color:red">Access Denied</b></p>`),
     },
     { 
         name: "Password Scorer", 
         desc: "Evaluate entropy and complexity of system credentials.",
 //                                                                                                                                                                      math formula     
-        run: () => render(`<h3>Password Scorer</h3><input type="password" placeholder="Test Password" oninput="this.nextSibling.innerText = 'Entropy Score: ' + (this.value.length * 10) + '%'"><p>Score: 0%</p>`)
-    },
+        run: () => render(`<h3>Password Scorer</h3><input type="password" placeholder="Test Password" oninput="this.nextSibling.innerText = 'Entropy Score: ' + (this.value.length * 10) + '%'"><p>Score: 0%</p>`),
+        run: () => render(`<h3>Password Scorer</h3><input type="password" placeholder="Test Password" onclick="alert('clicked')>click me</button>
+        },
     { 
         name: "GDPR Data Portal", 
         desc: "Automate data removal requests for privacy compliance.",
