@@ -7,9 +7,12 @@ const securityTools = [
     { 
         name: "Password Scorer", 
         desc: "Evaluate entropy and complexity of system credentials.",
-//                                                                                                                                                                      math formula     
-        run: () => render(`<h3>Password Scorer</h3><input type="password" placeholder="Test Password" oninput="this.nextSibling.innerText = 'Entropy Score: ' + (this.value.length * 10) + '%'"><p>Score: 0%</p>`),
-        },
+        run: () => render(`
+            <h3>Password Scorer</h3>
+            <input type="password" placeholder="Test Password" oninput="document.getElementById('score-text').innerText = 'Entropy Score: ' + (this.value.length * 10) + '%'">
+            <p id="score-text">Score: 0%</p>
+        `)
+    },
     { 
         name: "GDPR Data Portal", 
         desc: "Automate data removal requests for privacy compliance.",
@@ -18,7 +21,7 @@ const securityTools = [
     { 
         name: "Phishing Simulator", 
         desc: "Employee security awareness training module.",
-        run: () => render(`<h3>Security Lab</h3><p style="background:#f0f0f0;padding:10px;font-size:0.9rem">From: amazon-verify@scam-link.net<br>Subject: Urgent Action Required!</p><button>Report Suspicious</button>`)
+        run: () => render(`<h3>Security Lab</h3><p style="background:#f0f0f0;padding:10px;font-size:0.9rem">From: amazon-verify@scam-link.net<br>Subject: Urgent Action Required!</p><button onclick="alert('Reported!')">Report Suspicious</button>`)
     },
     { 
         name: "SSL Health Monitor", 
@@ -48,6 +51,6 @@ const securityTools = [
     { 
         name: "Security Micro-Quiz", 
         desc: "Daily security awareness training for associates.",
-        run: () => render(`<h3>Daily Training</h3><p>Should you plug found USBs into work computers?</p><button>Yes</button> <button onclick="alert('Correct!')">Absolutely Not</button>`)
+        run: () => render(`<h3>Daily Training</h3><p>Should you plug found USBs into work computers?</p><button onclick="alert('Try again!')">Yes</button> <button onclick="alert('Correct!')">Absolutely Not</button>`)
     }
 ];
