@@ -9,7 +9,6 @@ const securityTools = [
         desc: "Evaluate entropy and complexity of system credentials.",
 //                                                                                                                                                                      math formula     
         run: () => render(`<h3>Password Scorer</h3><input type="password" placeholder="Test Password" oninput="this.nextSibling.innerText = 'Entropy Score: ' + (this.value.length * 10) + '%'"><p>Score: 0%</p>`),
-        run: () => render(`<h3>Password Scorer</h3><input type="password" placeholder="Test Password" onclick="alert('clicked')>click me</button>
         },
     { 
         name: "GDPR Data Portal", 
