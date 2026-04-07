@@ -9,8 +9,8 @@ const securityTools = [
         desc: "Evaluate entropy and complexity of system credentials.",
         run: () => render(`
             <h3>Password Scorer</h3>
-            <input type="password" placeholder="Test Password" oninput="document.getElementById('score-text').innerText = 'Entropy Score: ' + (this.value.length * 10) + '%'">
-            <p id="score-text">Score: 0%</p>
+            <input type="password" placeholder="Test Password" oninput="document.getElementById('p-score').innerText = 'Entropy Score: ' + (this.value.length * 10) + '%'">
+            <p id="p-score">Score: 0%</p>
         `)
     },
     { 
