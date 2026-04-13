@@ -4,7 +4,7 @@ Disclaimer: This repository contains the source code. The PHP and MySQL features
 
 **Live Demo:** [https://operationsautomationsuite.infinityfreeapp.com](https://operationsautomationsuite.infinityfreeapp.com/)
 
-Manager Dashboard: operationsautomationsuite.infinityfreeapp.com/manager.html
+Manager Dashboard: https://operationsautomationsuite.infinityfreeapp.com/manager.html
 
 ### Project Overview
 This is a full-stack enterprise-grade operations suite designed to streamline warehouse logistics and system security auditing. 
