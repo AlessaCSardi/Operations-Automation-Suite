@@ -1,5 +1,7 @@
 # 🚀 Amazon Operations Automation Suite
 
+Disclaimer: Some Frontend/Backend Stack remain hidden, however you can access the fully working site on the following Demo link:
+
 **Live Demo:** [operationsautomationsuite.infinityfreeapp.com](https://operationsautomationsuite.infinityfreeapp.com/)
 
 ### Project Overview
