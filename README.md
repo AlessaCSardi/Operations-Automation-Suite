@@ -1,6 +1,6 @@
 # 🚀 Amazon Operations Automation Suite
 
-Disclaimer: Some Frontend/Backend Stack remain hidden in this repository, however you can access the fully working site on the following Demo link:
+Disclaimer: This repository contains the source code. The PHP and MySQL features require a live server environment and are fully functional at the demo link below:
 
 **Live Demo:** [operationsautomationsuite.infinityfreeapp.com](https://operationsautomationsuite.infinityfreeapp.com/)
 
@@ -11,6 +11,3 @@ This is a full-stack enterprise-grade operations suite designed to streamline wa
 * **Full-Stack Integration:** Powered by a MySQL backend and a PHP API for real-time data persistence.
 * **Cryptographic Auditing:** Features a high-complexity password entropy lab based on the formula $E = L \times \log_2(R)$.
 * **Operational Command Center:** A dedicated administrative dashboard for managers to filter, search, and export logistics logs as CSV.
-
----
-*Note: This repository contains the source code. The PHP and MySQL features require a live server environment and are fully functional at the demo link above.*
