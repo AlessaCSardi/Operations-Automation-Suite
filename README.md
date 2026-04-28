@@ -1,4 +1,4 @@
-# 🚀 Amazon Operations Automation Suite
+# 🚀 Operations Automation Suite
 
 Disclaimer: This repository contains the source code. The PHP and MySQL features require a live server environment and are fully functional at the demo link below:
 
